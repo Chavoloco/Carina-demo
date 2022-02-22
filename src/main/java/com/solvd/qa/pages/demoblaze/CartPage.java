@@ -26,11 +26,15 @@ public class CartPage extends AbstractPage {
     public ProductElement getProduct(){
         ProductElement productElement = new ProductElement();
         productElement.setName(productName.getText());
-        productElement.setPrice(Integer.parseInt(productPrice.getText().replaceAll("(?:(?!\\d|Free)(?s:.))*(\\d+(?:[.,]\\d+)*|Free)?", "$1")));
+        productElement.setPrice(removeDollarSign(productPrice.getText()));
         return productElement;
     }
 
     public void clickDeleteButton(){
         deleteButton.click();
+    }
+
+    private int removeDollarSign(String price){
+        return Integer.parseInt(price.replaceAll("(?:(?!\\d|Free)(?s:.))*(\\d+(?:[.,]\\d+)*|Free)?", "$1"));
     }
 }

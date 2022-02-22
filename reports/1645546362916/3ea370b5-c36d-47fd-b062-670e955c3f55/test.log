@@ -1,0 +1,12 @@
+[2022-02-22 01:12:43] [TestRunRegistrar.java] [1] [WARN] Reporting disabled: using no op test run registrar
+[2022-02-22 01:12:43] [IMessager.java] [1] [INFO] TEST [Carina-demo - verifyCanAddAProduct] STARTED at [13:12:43 2022-02-22]
+[2022-02-22 01:12:45] [IMessager.java] [23] [INFO] INFO: opening url 'https://www.demoblaze.com/'
+[2022-02-22 01:12:46] [DriverListener.java] [23] [INFO] URL 'https://www.demoblaze.com/' opened
+[2022-02-22 01:12:47] [DriverListener.java] [1] [INFO] PASS: element 'productName' is clicked.
+[2022-02-22 01:12:48] [IMessager.java] [27] [INFO] INFO: opening url 'https://www.demoblaze.com/'
+[2022-02-22 01:12:48] [DriverListener.java] [27] [INFO] URL 'https://www.demoblaze.com/' opened
+[2022-02-22 01:12:48] [DriverListener.java] [1] [INFO] PASS: element 'productName' is clicked.
+[2022-02-22 01:12:49] [DriverListener.java] [1] [INFO] PASS: element 'addToCartButton' is clicked.
+[2022-02-22 01:12:50] [DriverListener.java] [1] [INFO] Alert accepted
+[2022-02-22 01:12:50] [DriverListener.java] [1] [INFO] PASS: element 'cartButton' is clicked.
+[2022-02-22 01:12:51] [IMessager.java] [1] [INFO] TEST [Carina-demo - verifyCanAddAProduct] PASSED at [13:12:51 2022-02-22]

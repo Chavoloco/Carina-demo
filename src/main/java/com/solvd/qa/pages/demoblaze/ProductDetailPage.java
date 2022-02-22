@@ -37,7 +37,7 @@ public class ProductDetailPage extends AbstractPage {
 
     public ProductElement getProduct() {
         ProductElement productElement = new ProductElement();
-        productElement.setPrice(Integer.parseInt(productPrice.getText().replaceAll("(?:(?!\\d|Free)(?s:.))*(\\d+(?:[.,]\\d+)*|Free)?", "$1")));
+        productElement.setPrice(removeDollarSign(productPrice.getText()));
         productElement.setName(productTitle.getText());
         return productElement;
     }
@@ -55,6 +55,10 @@ public class ProductDetailPage extends AbstractPage {
     public String alert_getText(){
         new WebDriverWait(driver, 5).until(ExpectedConditions.alertIsPresent());
         return driver.switchTo().alert().getText();
+    }
+
+    private int removeDollarSign(String price){
+        return Integer.parseInt(price.replaceAll("(?:(?!\\d|Free)(?s:.))*(\\d+(?:[.,]\\d+)*|Free)?", "$1"));
     }
 
 

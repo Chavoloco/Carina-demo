@@ -1,0 +1,6 @@
+[2022-02-22 01:16:53] [TestRunRegistrar.java] [1] [WARN] Reporting disabled: using no op test run registrar
+[2022-02-22 01:16:53] [IMessager.java] [1] [INFO] TEST [Carina-demo - verifyCanClickLaptopsButton] STARTED at [13:16:53 2022-02-22]
+[2022-02-22 01:16:54] [IMessager.java] [23] [INFO] INFO: opening url 'https://www.demoblaze.com/'
+[2022-02-22 01:16:55] [DriverListener.java] [23] [INFO] URL 'https://www.demoblaze.com/' opened
+[2022-02-22 01:16:56] [DriverListener.java] [1] [INFO] PASS: element 'laptopsSection' is clicked.
+[2022-02-22 01:16:57] [IMessager.java] [1] [INFO] TEST [Carina-demo - verifyCanClickLaptopsButton] PASSED at [13:16:57 2022-02-22]

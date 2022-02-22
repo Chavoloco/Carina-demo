@@ -255,7 +255,7 @@ public class HomePage extends AbstractPage {
         ProductElement productElement = new ProductElement("Nn", 1200);
         for (ExtendedWebElement element :
                 productsPrice) {
-            int price = Integer.parseInt(element.getText().replaceAll("(?:(?!\\d|Free)(?s:.))*(\\d+(?:[.,]\\d+)*|Free)?", "$1"));
+            int price = removeDollarSign(element.getText());
             if (price < productElement.getPrice()) {
                 productElement.setPrice(price);
             }
@@ -268,13 +268,17 @@ public class HomePage extends AbstractPage {
         ProductElement productElement = new ProductElement("Nn", 0);
         for (ExtendedWebElement element :
                 productsPrice) {
-            int price = Integer.parseInt(element.getText().replaceAll("(?:(?!\\d|Free)(?s:.))*(\\d+(?:[.,]\\d+)*|Free)?", "$1"));
+            int price = removeDollarSign(element.getText());
             if (price > productElement.getPrice()) {
                 productElement.setPrice(price);
             }
         }
 
         return productElement;
+    }
+
+    private int removeDollarSign(String price){
+        return Integer.parseInt(price.replaceAll("(?:(?!\\d|Free)(?s:.))*(\\d+(?:[.,]\\d+)*|Free)?", "$1"));
     }
 
     //------------------------------------------------
